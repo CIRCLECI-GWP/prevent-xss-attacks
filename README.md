@@ -32,7 +32,7 @@ npm run test
 
 This repo is built following a tutorial published on CircleCI blog under the CircleCI Guest Writer Program.
 
-- Blog post: [Application Logging with Flask][blog]
+- Blog post: [Prevent XSS attacks with browser testing][blog]
 - Author's GitHub profile: [Fikayo Adepoju][author]
 
 ### About CircleCI Guest Writer Program
