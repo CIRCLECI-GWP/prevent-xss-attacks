@@ -8,6 +8,8 @@ jobs:
       - image: cimg/node:18.2.0-browsers
     steps:
       - checkout
+      - node/install:
+          node-version: "18.2.0"
       - run:
           name: Update NPM
           command: "sudo npm install -g npm"
