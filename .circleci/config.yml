@@ -1,13 +1,12 @@
 version: 2.1
 orbs:
-  browser-tools: circleci/browser-tools@1.1.0
+  node: circleci/node@5.0.2
 jobs:
   build:
     working_directory: ~/repo
     docker:
-      - image: cimg/node:12.13.1
+      - image: cimg/node:18.2.0-browsers
     steps:
-      - browser-tools/install-browser-tools
       - checkout
       - run:
           name: Update NPM
