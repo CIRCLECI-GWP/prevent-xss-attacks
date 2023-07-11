@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 let bodyParser = require("body-parser");
 
-let port = process.env.PORT || "5000";
+let port = process.env.PORT || "5001";
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -14,11 +14,20 @@ app.get("/", (req, res) => {
 });
 
 app.post("/sendinfo", (req, res) => {
+    let email = req.body.email;
 
-    const email = req.body.email;
-    
-    res.send({email});
+    if (!validEmail(email)) {
+        email = "Enter a Valid Email e.g test@company.com";
+    }
+
+    res.send({ email });
 });
+
+function validEmail(mail) {
+    return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+        mail
+    );
+}
 
 
 app.listen(port, () => {
