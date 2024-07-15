@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 let bodyParser = require("body-parser");
 
-let port = process.env.PORT || "5000";
+let port = process.env.PORT || "3000";
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

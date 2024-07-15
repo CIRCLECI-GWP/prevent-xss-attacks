@@ -5,7 +5,7 @@ test("Check for XSS attack on email field", async () => {
   try {
     const page = await browser.newPage();
 
-    await page.goto("http://localhost:5000");
+    await page.goto("http://localhost:3000");
 
     await page.type("#userEmail", '<input type="file" />');
     await page.type("#userPassword", "password");
