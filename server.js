@@ -15,9 +15,9 @@ app.get("/", (req, res) => {
 app.post("/sendinfo", (req, res) => {
   let email = req.body.email;
 
-  if (!validEmail(email)) {
-    email = "Enter a Valid Email e.g test@company.com";
-  }
+  // if (!validEmail(email)) {
+  //   email = "Enter a Valid Email e.g test@company.com";
+  // }
 
   res.send({ email });
 });
