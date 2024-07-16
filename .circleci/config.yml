@@ -1,11 +1,10 @@
 version: 2.1
 orbs:
-  node: circleci/node@5.0.2
+  node: circleci/node@5.1.0
 jobs:
   build:
-    working_directory: ~/repo
     docker:
-      - image: cimg/node:18.2.0-browsers
+      - image: cimg/node:20.4.0-browsers
     steps:
       - checkout
       - node/install-packages:
